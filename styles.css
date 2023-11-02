@@ -133,17 +133,54 @@ input[type="submit"] {
     cursor: pointer;
 }
 .img-1{
-    width: 250px;
-    height: 250px;
+    margin: auto;
+    padding: auto;
+    width: 350px;
+    height: 350px;
 }
 .img-2{
-    width: 250px;
-    height: 250px;
+    margin: auto;
+    padding: auto;
+    width: 350px;
+    height: 350px;
 }
 div{
+    margin: 0;
+    padding: 0;
     display: flex;
     color: #fff;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding: auto;
     margin: auto;
 }
+
+footer {
+    background-color: #db590e;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    display: grid;
+}
+
+
+.social-media a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 24px;
+}
+
+
+.whatsapp-contact a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+
+.fab {
+    font-size: 1.5em;
+    vertical-align: middle;
+}
+
+
