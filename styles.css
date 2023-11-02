@@ -27,9 +27,7 @@ nav li {
     
 }
 nav ul li a {
-    
     color: white;
-    
     padding: 14px 16px;
     text-decoration: none;
 }
@@ -83,7 +81,7 @@ p {
 .servicio {
 
     display: inline-block;
-    text-align: center;
+    text-align: left;
     margin: 20px;
 }
 
@@ -91,6 +89,8 @@ p {
 #nosotros {
     background-color: #333;
     padding: 40px;
+    display: flexbox;
+    color: #fff;
 }
 
 .equipo {
@@ -100,7 +100,8 @@ p {
 }
 
 .miembro {
-    text-align: center;
+    display: flex;
+    text-align: left;
     margin: 20px;
     color: #fff;
 }
@@ -130,4 +131,19 @@ input[type="submit"] {
     padding: 10px 20px;
     border: none;
     cursor: pointer;
+}
+.img-1{
+    width: 250px;
+    height: 250px;
+}
+.img-2{
+    width: 250px;
+    height: 250px;
+}
+div{
+    display: flex;
+    color: #fff;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: auto;
+    margin: auto;
 }
