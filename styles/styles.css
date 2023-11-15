@@ -5,10 +5,10 @@ body {
     padding: 0;
     background-color: #333;
 }
-section{
+
+section {
     background-color: #333;
 }
-
 
 header {
     background-color: #db590e;
@@ -16,20 +16,21 @@ header {
     text-align: center;
     padding: 20px;
 }
+nav {
+    transition: background-color 0.3s ease-in-out;
+}
 
 nav ul {
     list-style-type: none;
     padding: 0;
-   
     background-size: contain;
 }
 
 nav li {
     display: inline;
     margin-right: 20px;
- 
-    
 }
+
 nav ul li a {
     color: white;
     padding: 14px 16px;
@@ -39,7 +40,6 @@ nav ul li a {
 nav ul li a:hover {
     background-color: #111;
 }
-
 
 main {
     text-align: center;
@@ -55,6 +55,10 @@ img {
     max-width: 350px;
     height: auto;
     border-radius: 50px;
+    transition: transform 0.3s ease-in-out;
+}
+img:hover {
+    transform: scale(1.01);
 }
 
 h2 {
@@ -79,19 +83,16 @@ p {
     margin-top: 20px;
 }
 
-
 #servicios {
     background-color: #333;
     padding: 20px;
 }
 
 .servicio {
-
     display: inline-block;
     text-align: left;
     margin: 20px;
 }
-
 
 #nosotros {
     background-color: #333;
@@ -113,7 +114,6 @@ p {
     color: #fff;
 }
 
-
 #contacto {
     background-color: #db590e;
     color: #fff;
@@ -129,33 +129,35 @@ form {
 }
 
 input[type="text"], input[type="email"], textarea {
-   display: flex;
+    display: flex;
     padding: 10px;
     margin-bottom: 10px;
-background-color: #333;
+    background-color: #fff;
 }
 
 input[type="submit"] {
     background-color: #f4f4f4;
-    color:#333;
+    color: #fff;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
+}
 
-}
-.img-1{
+.img-1 {
     margin: auto;
     padding: auto;
     width: 350px;
     height: 350px;
 }
-.img-2{
+
+.img-2 {
     margin: auto;
     padding: auto;
     width: 350px;
     height: 350px;
 }
-div{
+
+div {
     margin: 0;
     padding: 0;
     display: flex;
@@ -174,7 +176,6 @@ footer {
     display: grid;
 }
 
-
 .social-media a {
     color: #fff;
     text-decoration: none;
@@ -183,48 +184,106 @@ footer {
     justify-content: center;
 }
 
-
 .whatsapp-contact a {
     color: #fff;
     text-decoration: none;
     font-size: 18px;
 }
 
-
 .fab {
     font-size: 1.5em;
     vertical-align: middle;
 }
-nav.navbar {
-    display: flex;
-    justify-content: center;
-}
-
-.navbar-toggler {
-    background-color: #db590e;
-    justify-content: center;
-}
-
-.navbar-toggler-icon {
-    background-color:#333;
-}
-.cta-button:hover {
-    background-color: #111;
-    transition: background-color 0.3s ease-in-out;
-}
 
 
-.responsive-image {
-    max-width: 100%;
-    height: auto;
-}
 
+@media (max-width: 767px) {
+    nav ul {
+        text-align: center;
+    }
 
-img {
-    margin: 0;
-    padding: 0;
+    nav li {
+        display: block;
+        margin: 0;
+    }
+
+    nav ul li a {
+        background-color: #333;
+        display: block;
+        padding: 14px 0;
+        margin: 0;
+    }
+
+    .cta-button {
+        display: block;
+        margin: 20px auto;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    .servicio,
+    .miembro {
+        text-align: center;
+    }
+
+    
+    #galeria {
+        padding: 20px;
+    }
+
+    #galeria h2 {
+        font-size: 20px;
+    }
+
+    #galeria div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img-1,
+    .img-2 {
+        width: 100%;
+        height: auto;
+        max-width: none;
+    }
+
+    #galeria h3 {
+        text-align: center;
+    }
+    #nosotros {
+        text-align: center; 
+    }
+
+    #contacto {
+        text-align: center; 
+    }
+    #nosotros .miembro {
+        text-align: center;
+    }
+    #contacto form {
+        padding: 10px;
+    }
+    #nosotros .miembro,
+    #contacto form {
+        font-size: 16px;
+        line-height: 1.6;
+    }
 }
-footer{
-    background-color: #db590e;
-    justify-content: center
+@media (min-width: 768px) {
+    nav ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    nav li {
+        display: inline;
+        margin: 0 20px;
+    }
+
+    .cta-button {
+        margin: 0;
+    }
 }
