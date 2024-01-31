@@ -1,0 +1,14 @@
+[
+    {
+      "nombre": "Dragon Articulado",
+      "imagen": "../multimedia/dragon.jpg",
+      "descripcion": "Dragon articulado para decorar tu sala de juegos y pasar tardes de D&D.",
+      "precio": 25.99
+    },
+    {
+      "nombre": "Llavero Gallina",
+      "imagen": "../multimedia/llavero.jpg",
+      "descripcion": "Llavero de gallina para no perder tus llaves de una forma diferente y decorativa.",
+      "precio": 9.99
+    }
+  ]

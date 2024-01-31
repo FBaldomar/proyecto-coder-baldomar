@@ -32,13 +32,23 @@
             </div>
         </nav>
     </header>
-    <section id="galeria">
-        <h2>Galería</h2><div> <img src="../multimedia/dragon.jpg" class="img-1" alt="dragon">
-            <h3>dragon articulado: para decorar tu sala de juegos y pasar tardes de d&d</h3>
-            <img src="../multimedia/llavero.jpg" class="img-2" alt="llavero">
-            <h3>lavero gallina: para no perder tus llaves de una forma diferente y decorativa</h3>
-        </div>
-    </section>
+   <!-- Agregar una sección para mostrar los productos -->
+<section id="productos">
+    <!-- Aquí se mostrarán los productos dinámicamente con JavaScript -->
+</section>
+
+<!-- Agregar un botón para vaciar el carrito -->
+<button onclick="vaciarCarrito()">Vaciar Carrito</button>
+
+<!-- Agregar un modal para mostrar detalles del producto -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="cerrarModal()">&times;</span>
+        <h2 id="modalTitle"></h2>
+        <p id="modalDescription"></p>
+        <button onclick="agregarAlCarrito()">Agregar al Carrito</button>
+    </div>
+</div>
     <footer>
         <div class="social-media">
             <a href="#" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
@@ -49,6 +59,6 @@
             <a href="https://wa.me/1234567890" target="_blank" title="Contacto de WhatsApp"><i class="fab fa-whatsapp"></i> Contacto de WhatsApp</a>
         </div>
     </footer>
-    
+    <script src="../script/galeria.js"></script>
 </body>
 </html>
