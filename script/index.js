@@ -63,7 +63,7 @@ btnOrder.addEventListener('click', ()=> {
     btnOrder.setAttribute('disabled', true)
 })
 
- /* ------- Recibe la lista de productos y la recorre y loos renderizas ------- */
+
 const renderProducts = (list) => {
     listProducts.innerHTML = '';
     list.forEach(product => {
@@ -80,7 +80,7 @@ const renderProducts = (list) => {
             </div>`;
     });
 
-    /* -------------- Agrege el escuchador de eventos a los botones ------------- */
+ 
     const btns = document.querySelectorAll('.btnAddCart');
     btns.forEach(btn => {
         btn.addEventListener('click', addToCart);
