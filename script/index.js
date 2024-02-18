@@ -1,3 +1,5 @@
+import { Cart } from './carito.js';
+import { products } from './data.js';
 const modal = new bootstrap.Modal('#modalCarrito', {});
 const btnModalCarrito = document.querySelector('#btnModalCarrito');
 const cartCount = document.querySelector('#cartCount');
@@ -13,8 +15,8 @@ const btnOrder = document.querySelector('#btnOrder');
 const listCart = JSON.parse( localStorage.getItem('cart') ) || [];
 const cart = new Cart(listCart);
 
-cartCount.innerText = cart.getCount();
 
+cartCount.innerText = cart.getCount();
 
 btnModalCarrito.addEventListener('click', function(){
     const list = cart.getProducts();
@@ -23,7 +25,7 @@ btnModalCarrito.addEventListener('click', function(){
     redenCart( list );
 
     modal.show();
-})
+});
 
 btnSave.addEventListener('click', ()=> {
 
@@ -35,34 +37,33 @@ btnSave.addEventListener('click', ()=> {
     });
 
     localStorage.removeItem('cart');
-})
+});
 
 btnClose.addEventListener('click', ()=> {
     modal.hide();
-})
+});
 
 inputSearch.addEventListener('input', (event) => {
     const search = event.target.value;
     const newList = products.filter(  (product) => product.name.toLowerCase().includes( search.toLowerCase() )  );
     renderProducts(newList);
-})
+});
 
 btnOrder.addEventListener('click', ()=> {
     products.sort(  (a, b ) => {
         if(  a.price < b.price  ){
-            return -1
+            return -1;
         }
         if ( a.price > b.price){
-            return 1
+            return 1;
         }
 
-        return 0
-    } )
+        return 0;
+    });
 
-    renderProducts(products)
-    btnOrder.setAttribute('disabled', true)
-})
-
+    renderProducts(products);
+    btnOrder.setAttribute('disabled', true);
+});
 
 const renderProducts = (list) => {
     listProducts.innerHTML = '';
@@ -70,23 +71,22 @@ const renderProducts = (list) => {
         listProducts.innerHTML += 
             `<div class="col-sm-4 col-md-3">
                 <div class="card p-2">
-                    <h4 class="text-center">${product.name} </h4>
+                    <h4 class="text-center">${product.name}</h4>
                     <img class="img-fluid" src="${product.img}" alt="${product.name}">
-                    <h3 class="text-center">$${product.price} </h3>
-                    <button id="${product.id} " type="button" class="btn btn-primary btnAddCart">
+                    <h3 class="text-center">$${product.price}</h3>
+                    <button id="${product.id}" type="button" class="btn btn-primary btnAddCart">
                         <i class="fa-solid fa-cart-plus"></i> Agregar
                     </button>
                 </div>
             </div>`;
     });
 
- 
     const btns = document.querySelectorAll('.btnAddCart');
     btns.forEach(btn => {
         btn.addEventListener('click', addToCart);
     });
 
-}
+};
 
 const addToCart = ( e )=> {
     const id = e.target.id;
@@ -105,7 +105,7 @@ const addToCart = ( e )=> {
           },
     }).showToast();
 
-}
+};
 
 const redenCart = (list) => {
     modalListProducts.innerHTML = '';
@@ -116,8 +116,8 @@ const redenCart = (list) => {
                 <td> ${product.units}</td>
                 <td>$${product.price}</td>
                 <td>$${product.price * product.units}</td>
-
-            </tr>`
+            </tr>`;
     });
-}
+};
+
 renderProducts( products);
